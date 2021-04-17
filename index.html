@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h1><u>Percentage Calculator</u></h1><br>
+<input type="number" onkeyup="calculatePercentage()" id="percent" placeholder="Percent here">
+<input type="number" onkeyup="calculatePercentage()" id="numberValue" placeholder="Number here"> 
+<p id="display"></p>
+</center>
+<script>
+function calculatePercentage() {
+    let output = document.getElementById('display');
+    let percentToGet = document.getElementById('percent').value;
+    let inputValue = document.getElementById('numberValue').value;
+    let result = (percentToGet / 100) * inputValue;
+    if(!inputValue || !percentToGet)
+    {
+        output.innerHTML = "Number or percent is null!";
+    }
+    else {
+        output.innerHTML = percentToGet + " percent of " + inputValue + " is " + result;
+    }
+}
+</script>
+
+</body>
+</html>
